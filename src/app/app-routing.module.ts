@@ -18,7 +18,13 @@ const routes: Routes = [
   {
     path: 'pagina-inicial',
     loadChildren: () => import('./paginas/pagina-inicial/pagina-inicial.module').then( m => m.PaginaInicialPageModule)
-  }
+  },
+  {
+    path: 'resumo-livros/:id',
+    loadChildren: () => import('./paginas/resumo-livros/resumo-livros.module').then( m => m.ResumoLivrosPageModule)
+  },
+
+
 ];
 
 @NgModule({
