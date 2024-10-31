@@ -1,14 +1,16 @@
 .centralizar {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
     flex-direction: column;
-    margin-top: 70px;
+    height: 100%;
 }
 
 .centralizar-avatar {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
 }
 
 .avatar-grande {
@@ -17,10 +19,10 @@
 }
 
 .card {
-    width: 450px;
+    width: 500px;
     padding: 10px;
 }
 
 .logo-aliançados {
-    width: 110px;
+    width: 180px;
 }
