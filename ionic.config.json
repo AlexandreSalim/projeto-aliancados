@@ -1,0 +1,7 @@
+{
+  "name": "aliancados",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
