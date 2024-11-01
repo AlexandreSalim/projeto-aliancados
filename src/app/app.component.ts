@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { register } from 'swiper/element/bundle';
 register();
 
@@ -10,8 +11,15 @@ register();
 export class AppComponent {
   public appPages = [
     { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
-    { title: 'login', url: '/login', icon: 'warning' },
     { title: 'pagina inicial', url: '/pagina-inicial', icon: 'warning' },
   ];
-  constructor() {}
+  
+  isLoginPage: boolean = false;
+
+  constructor(private router: Router) {
+    // Atualizar a variável de rota sempre que mudar
+    this.router.events.subscribe(() => {
+      this.isLoginPage = this.router.url === '/login';
+    });
+  }
 }
