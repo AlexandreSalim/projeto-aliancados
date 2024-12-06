@@ -1,0 +1,46 @@
+.centralizar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.centralizar-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-grande {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.card {
+    width: 600px;
+    padding: 20px;
+}
+
+.logo-aliançados {
+    width: 180px;
+    height: 80px;
+}
+
+.identar-lista {
+    margin-left: 5px;
+}
+
+.botao {
+    margin-left: 21px;
+}
+
+@media (min-width: 1280px) {
+    
+    .card {
+        width: 500px;
+        margin: 0;
+        padding: 20px;
+    }
+
+}

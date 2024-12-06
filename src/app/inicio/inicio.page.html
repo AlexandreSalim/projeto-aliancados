@@ -1,0 +1,122 @@
+<ion-toolbar>
+
+  <div class="header">
+
+    <div style="height: 69px; margin: 0 0 10px 20px;">
+      <ion-img class="logo-aliançados" src="assets/img/logo-aliancados-branca.png"></ion-img>
+    </div>
+
+    <ion-buttons slot="end" class="icones">
+      <ion-icon name="notifications" color="branco" (click)="openRightMenu()" style="cursor: pointer; margin-right: 22px;" ></ion-icon>
+
+      <div class="search-container">
+        <ion-icon name="search" color="branco" (click)="toggleSearch()" style="cursor: pointer;"></ion-icon>
+        <input
+          *ngIf="showSearch"
+          type="text"
+          class="search-input"
+          placeholder="Pesquisar..."
+          (blur)="toggleSearch()" />
+      </div>
+
+      <ion-menu-button color="branco"></ion-menu-button>
+    </ion-buttons>
+
+  </div>
+</ion-toolbar>
+
+<ion-content [fullscreen]="true" color="cinza-claro" class="conteudo-do-content">
+  <div class="informaçoes-do-cliente">
+    <div class="informacao">
+      <ion-avatar>
+        <ion-icon name="person-circle" class="icon-person"></ion-icon>
+      </ion-avatar>
+
+      <div class="nome-email">
+        <ion-title class="nomeCliente" color="branco">Olá, <span>{{ userName }}</span>!</ion-title>
+        <ion-title class="emailCliente" color="branco">{{ userEmail }}</ion-title>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="pai-conteudo">
+
+    <div class="conteudos ">
+
+      <ion-card class="card">
+        <ion-toolbar>
+          <div class="card-conteudo">
+            <ion-icon name="reader-outline"></ion-icon>
+            <h2 class="icone-e-titulo">Vivendo em aliança!</h2>
+          </div>
+
+          <div class="card-conteudo-text">
+            <div style="margin-bottom: 10px;">
+              <p>Explore nossos conteúdos: conteúdos para uma vida</p>
+              <p>plena em aliança</p>
+            </div>
+
+            <ion-button color="azul-escuro" style="width: 150px; text-transform: capitalize;" (click)="navigateToVivendoEmAlianca()">Acesse!</ion-button>
+          </div>
+        </ion-toolbar>
+      </ion-card>
+
+    </div>
+
+    <div class="conteudos">
+
+      <ion-card class="card">
+        <ion-toolbar>
+          <div class="card-conteudo">
+            <ion-icon name="library-outline"></ion-icon>            
+            <h2 class="icone-e-titulo">Biblioteca dos Aliançados</h2>
+          </div>
+
+          <div class="card-conteudo-text">
+            <div style="margin-bottom: 10px;">
+              <p>Cresça em fé e Aliança: explore nossa biblioteca de</p>
+              <p>conteúdos inspiradores.</p>
+            </div>
+
+            <ion-button color="azul-escuro" style="width: 150px; text-transform: capitalize;" (click)="navigateToBibliotecaDosAliancados()">Acesse!</ion-button>
+          </div>
+        </ion-toolbar>
+      </ion-card>
+
+    </div>
+
+    <div class="conteudos">
+
+      <ion-card class="card card-desktop">
+        <ion-toolbar>
+          <div class="card-conteudo card-conteudo__calendario">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <ion-icon name="bookmark-outline"></ion-icon>
+              <h2 class="icone-e-titulo">Próximos Eventos:</h2>
+            </div>
+            <ion-button (click)="resetToDefaultEvents()" color="azul-escuro">Eventos</ion-button>
+          </div>
+
+          <div class="card-conteudo-text">
+            
+            <div class="calendario">
+              <mat-card class="demo-inline-calendar-card">
+                <mat-calendar [(selected)]="selectedDate" [dateClass]="dateClass" (selectedChange)="onDateSelect($event)"></mat-calendar>
+              </mat-card>
+              <div style="display: flex; align-items: start; width: 340px; margin: 0 0 0 35px;">
+                <p *ngIf="currentMessage" style="font-size: smaller;" [innerText]="currentMessage"></p>  
+                <!-- Exibir mensagem da data selecionada -->
+                <p *ngIf="selectedMessage" style="margin: 24px 0 0 0; font-size: smaller;">{{ selectedMessage }}</p>
+              </div>
+            </div>
+          </div>       
+        </ion-toolbar>
+      </ion-card>
+
+    </div>
+
+
+  </section>
+
+</ion-content>

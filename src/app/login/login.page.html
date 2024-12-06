@@ -1,0 +1,47 @@
+<ion-content color="cinza-claro">
+  <div class="centralizar">
+    <div class="centralizar-avatar">
+      <ion-avatar class="avatar-grande">
+        <img src="assets/img/icone-de-login.png">
+      </ion-avatar>
+    </div>
+
+    <div class="centralizar-avatar">
+      <ion-card class="card">
+        <ion-toolbar>
+          <ion-title color="letras">Bem-vindos, <strong>Aliançados!</strong></ion-title>
+        </ion-toolbar>
+        <ion-toolbar>
+          <ion-title color="letras">Login</ion-title>
+        </ion-toolbar>
+
+        <form [formGroup]="form" (ngSubmit)="logar()">
+
+          <ion-list class="identar-lista">
+            <ion-item>
+              <ion-input type="email" label="Email" labelPlacement="floating" placeholder="exemplo@gmail.com"
+                [(ngModel)]="email" formControlName="userEmail"></ion-input>
+              </ion-item>
+              <ion-text style="margin-left: 15px;" *ngIf="form.controls['userEmail'].invalid && form.controls['userEmail'].touched">Email incorreto</ion-text>
+
+
+            <ion-item>
+              <ion-input type="password" labelPlacement="floating" placeholder="*****" [(ngModel)]="senha" formControlName="userName">
+                <div slot="label">Senha</div>
+              </ion-input>
+            </ion-item>
+            <ion-text style="margin-left: 15px;" *ngIf="form.controls['userName'].invalid && form.controls['userName'].touched">Senha incorreto</ion-text>
+          </ion-list>
+
+          <ion-button class="botao" color="azul-claro" expand="block" type="submit">ACESSAR</ion-button>
+        </form>
+
+      </ion-card>
+    </div>
+
+    <div class="centralizar-avatar">
+      <ion-img class="logo-aliançados" src="assets/img/logo-aliançados.png"></ion-img>
+    </div>
+
+  </div>
+</ion-content>

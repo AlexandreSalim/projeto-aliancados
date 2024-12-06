@@ -1,0 +1,95 @@
+.centralizar {
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    max-width: 700px;
+    height: 300px;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.resumo {
+    max-width: 700px;
+}
+
+.titulo {
+    font-size: xx-large;
+    height: 20px;
+}
+
+.informacaos-do-livro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.visualizacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 215px;
+
+    ion-title {
+        font-size: small;
+        margin-bottom: 5px;
+        padding: 0 !important;
+    }
+}
+
+.div-button {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.ultimo-button {
+    width: 500px;
+    max-width: 544px;    
+}
+
+.capa-livro {
+    width: 200px;
+
+    ion-img {
+        height: 280px;
+    }
+}
+
+.chevron-back-outline {
+    font-size: 30px;
+}
+
+@media (min-width: 700px) {
+    .centralizar, .resumo {
+        align-items: center;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-top: 20px;
+}
+
+
+.icones {
+    margin-right: 14px;
+
+    ion-icon,
+    ion-menu-button {
+        font-size: 29px;
+    }
+}
+
+.icones ion-icon:nth-child(1) {
+    margin-right: 10px;
+}

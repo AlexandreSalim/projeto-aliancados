@@ -1,0 +1,11 @@
+.header{
+    color: black;
+    font-size: small;
+}
+
+@media (min-width: 500px) {
+    .header{
+        color: black;
+        font-size: large;
+    }
+}

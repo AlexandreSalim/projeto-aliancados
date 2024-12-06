@@ -1,0 +1,364 @@
+<ion-content color="cinza-claro">
+  <ion-toolbar color="azul-claro">
+
+    <div class="header">
+  
+      <div class="icones" style="margin-left: 15px;">
+        <ion-icon name="chevron-back-outline" (click)="voltarPaginaInical()"></ion-icon>
+      </div>
+  
+      <ion-buttons slot="end" class="icones">
+        <ion-icon name="home-outline" color="branco" (click)="inicio()"></ion-icon>
+        <!-- <ion-icon icon="search" color="branco"></ion-icon> -->
+        <ion-menu-button color="branco"></ion-menu-button>
+      </ion-buttons>
+  
+    </div>
+  </ion-toolbar>
+
+  <div style="border-top: solid 1px white; padding: 10px; background-color: #212121;"></div>
+
+  <div *ngIf="livroId === 0" class="centralizar">
+
+    <ion-card class="card">
+
+      <div class="capa-livro">
+        <ion-img src="https://www.bahiagrafica.com.br/wp-content/uploads/2020/07/3139_1.jpg"></ion-img>
+      </div>
+
+      <div class="informacaos-do-livro">
+
+        <div style="flex-direction: column; display: flex; gap: 20px; margin-top: 10px;">
+          <ion-title color="letras" class="titulo" color="letras"><strong>Salmos 1</strong></ion-title>
+          <div>
+            <ion-title color="letras">Cristiane Messor</ion-title>
+            <ion-title color="letras">Publicado</ion-title>
+          </div>
+        </div>
+
+        <div>
+          <div class="visualizacao">
+            <ion-title color="letras" class="visualizacao">{{ visualizacao }} visualizações</ion-title>
+            <ion-title color="letras" class="visualizacao">{{ gostei }} gostei</ion-title>
+          </div>
+          <ion-button expand="block" color="azul-escuro" style="text-transform: capitalize;" (click)="like()">Gostei</ion-button>
+        </div>
+
+      </div>
+    </ion-card>
+
+    <ion-content color="cinza-claro" class="resumo">
+      <div>
+
+        <ion-title class="titulo" style="margin-top: 30px; padding: 10px;"><strong>Resumo</strong></ion-title>
+        <p style="padding: 10px;">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Sapiente quas nesciunt fugiat veritatis officiis debitis in
+          cupiditate odio quidem. Illum perferendis ipsam voluptates asperiores
+          molestias sint enim inventore sequi consequatur!
+        </p>
+
+      </div>
+
+      <div class="div-button">
+        <ion-button expand="block" class="ultimo-button" color="azul-claro" (click)="visualizado()">comprar livro</ion-button>
+      </div>
+
+    </ion-content>
+  </div>
+
+  <div *ngIf="livroId === 1" class="centralizar">
+
+    <ion-card class="card">
+
+      <div class="capa-livro">
+        <ion-img src="https://www.bahiagrafica.com.br/wp-content/uploads/2020/07/3139_1.jpg"></ion-img>
+      </div>
+
+      <div class="informacaos-do-livro">
+
+        <div style="flex-direction: column; display: flex; gap: 20px; margin-top: 10px;">
+          <ion-title color="letras" class="titulo" color="letras"><strong>Salmos 2</strong></ion-title>
+          <div>
+            <ion-title color="letras">Cristiane Messor</ion-title>
+            <ion-title color="letras">Publicado</ion-title>
+          </div>
+        </div>
+
+        <div>
+          <div class="visualizacao">
+            <ion-title color="letras" class="visualizacao">{{ visualizacao }} visualizações</ion-title>
+            <ion-title color="letras" class="visualizacao">{{ gostei }} gostei</ion-title>
+          </div>
+          <ion-button expand="block" color="azul-escuro" style="text-transform: capitalize;" (click)="like()">Gostei</ion-button>
+        </div>
+
+      </div>
+    </ion-card>
+
+    <ion-content color="cinza-claro" class="resumo">
+      <div>
+
+        <ion-title class="titulo" style="margin-top: 30px; padding: 10px;"><strong>Resumo</strong></ion-title>
+        <p style="padding: 10px;">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Sapiente quas nesciunt fugiat veritatis officiis debitis in
+          cupiditate odio quidem. Illum perferendis ipsam voluptates asperiores
+          molestias sint enim inventore sequi consequatur!
+        </p>
+
+      </div>
+
+      <div class="div-button">
+        <ion-button expand="block" class="ultimo-button" color="azul-claro" (click)="visualizado()">comprar livro</ion-button>
+      </div>
+
+    </ion-content>
+  </div>
+
+  <div *ngIf="livroId === 2" class="centralizar">
+
+    <ion-card class="card">
+
+      <div class="capa-livro">
+        <ion-img src="https://www.bahiagrafica.com.br/wp-content/uploads/2020/07/3139_1.jpg"></ion-img>
+      </div>
+
+      <div class="informacaos-do-livro">
+
+        <div style="flex-direction: column; display: flex; gap: 20px; margin-top: 10px;">
+          <ion-title color="letras" class="titulo" color="letras"><strong>Salmos 3</strong></ion-title>
+          <div>
+            <ion-title color="letras">Cristiane Messor</ion-title>
+            <ion-title color="letras">Publicado</ion-title>
+          </div>
+        </div>
+
+        <div>
+          <div class="visualizacao">
+            <ion-title color="letras" class="visualizacao">{{ visualizacao }} visualizações</ion-title>
+            <ion-title color="letras" class="visualizacao">{{ gostei }} gostei</ion-title>
+          </div>
+          <ion-button expand="block" color="azul-escuro" style="text-transform: capitalize;" (click)="like()">Gostei</ion-button>
+        </div>
+
+      </div>
+    </ion-card>
+
+    <ion-content color="cinza-claro" class="resumo">
+      <div>
+
+        <ion-title class="titulo" style="margin-top: 30px; padding: 10px;"><strong>Resumo</strong></ion-title>
+        <p style="padding: 10px;">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Sapiente quas nesciunt fugiat veritatis officiis debitis in
+          cupiditate odio quidem. Illum perferendis ipsam voluptates asperiores
+          molestias sint enim inventore sequi consequatur!
+        </p>
+
+      </div>
+
+      <div class="div-button">
+        <ion-button expand="block" class="ultimo-button" color="azul-claro" (click)="visualizado()">comprar livro</ion-button>
+      </div>
+
+    </ion-content>
+  </div>
+
+  <div *ngIf="livroId === 3" class="centralizar">
+
+    <ion-card class="card">
+
+      <div class="capa-livro">
+        <ion-img src="https://www.bahiagrafica.com.br/wp-content/uploads/2020/07/3139_1.jpg"></ion-img>
+      </div>
+
+      <div class="informacaos-do-livro">
+
+        <div style="flex-direction: column; display: flex; gap: 20px; margin-top: 10px;">
+          <ion-title color="letras" class="titulo" color="letras"><strong>Salmos 4</strong></ion-title>
+          <div>
+            <ion-title color="letras">Cristiane Messor</ion-title>
+            <ion-title color="letras">Publicado</ion-title>
+          </div>
+        </div>
+
+        <div>
+          <div class="visualizacao">
+            <ion-title color="letras" class="visualizacao">{{ visualizacao }} visualizações</ion-title>
+            <ion-title color="letras" class="visualizacao">{{ gostei }} gostei</ion-title>
+          </div>
+          <ion-button expand="block" color="azul-escuro" style="text-transform: capitalize;" (click)="like()">Gostei</ion-button>
+        </div>
+
+      </div>
+    </ion-card>
+
+    <ion-content color="cinza-claro" class="resumo">
+      <div>
+
+        <ion-title class="titulo" style="margin-top: 30px; padding: 10px;"><strong>Resumo</strong></ion-title>
+        <p style="padding: 10px;">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Sapiente quas nesciunt fugiat veritatis officiis debitis in
+          cupiditate odio quidem. Illum perferendis ipsam voluptates asperiores
+          molestias sint enim inventore sequi consequatur!
+        </p>
+
+      </div>
+
+      <div class="div-button">
+        <ion-button expand="block" class="ultimo-button" color="azul-claro" (click)="visualizado()">comprar livro</ion-button>
+      </div>
+
+    </ion-content>
+  </div>
+
+  <div *ngIf="livroId === 4" class="centralizar">
+
+    <ion-card class="card">
+
+      <div class="capa-livro">
+        <ion-img src="https://www.bahiagrafica.com.br/wp-content/uploads/2020/07/3139_1.jpg"></ion-img>
+      </div>
+
+      <div class="informacaos-do-livro">
+
+        <div style="flex-direction: column; display: flex; gap: 20px; margin-top: 10px;">
+          <ion-title color="letras" class="titulo" color="letras"><strong>Salmos 5</strong></ion-title>
+          <div>
+            <ion-title color="letras">Cristiane Messor</ion-title>
+            <ion-title color="letras">Publicado</ion-title>
+          </div>
+        </div>
+
+        <div>
+          <div class="visualizacao">
+            <ion-title color="letras" class="visualizacao">{{ visualizacao }} visualizações</ion-title>
+            <ion-title color="letras" class="visualizacao">{{ gostei }} gostei</ion-title>
+          </div>
+          <ion-button expand="block" color="azul-escuro" style="text-transform: capitalize;" (click)="like()">Gostei</ion-button>
+        </div>
+
+      </div>
+    </ion-card>
+
+    <ion-content color="cinza-claro" class="resumo">
+      <div>
+
+        <ion-title class="titulo" style="margin-top: 30px; padding: 10px;"><strong>Resumo</strong></ion-title>
+        <p style="padding: 10px;">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Sapiente quas nesciunt fugiat veritatis officiis debitis in
+          cupiditate odio quidem. Illum perferendis ipsam voluptates asperiores
+          molestias sint enim inventore sequi consequatur!
+        </p>
+
+      </div>
+
+      <div class="div-button">
+        <ion-button expand="block" class="ultimo-button" color="azul-claro" (click)="visualizado()">comprar livro</ion-button>
+      </div>
+
+    </ion-content>
+  </div>
+
+  <div *ngIf="livroId === 5" class="centralizar">
+
+    <ion-card class="card">
+
+      <div class="capa-livro">
+        <ion-img src="https://www.bahiagrafica.com.br/wp-content/uploads/2020/07/3139_1.jpg"></ion-img>
+      </div>
+
+      <div class="informacaos-do-livro">
+
+        <div style="flex-direction: column; display: flex; gap: 20px; margin-top: 10px;">
+          <ion-title color="letras" class="titulo" color="letras"><strong>Salmos 6</strong></ion-title>
+          <div>
+            <ion-title color="letras">Cristiane Messor</ion-title>
+            <ion-title color="letras">Publicado</ion-title>
+          </div>
+        </div>
+
+        <div>
+          <div class="visualizacao">
+            <ion-title color="letras" class="visualizacao">{{ visualizacao }} visualizações</ion-title>
+            <ion-title color="letras" class="visualizacao">{{ gostei }} gostei</ion-title>
+          </div>
+          <ion-button expand="block" color="azul-escuro" style="text-transform: capitalize;" (click)="like()">Gostei</ion-button>
+        </div>
+
+      </div>
+    </ion-card>
+
+    <ion-content color="cinza-claro" class="resumo">
+      <div>
+
+        <ion-title class="titulo" style="margin-top: 30px; padding: 10px;"><strong>Resumo</strong></ion-title>
+        <p style="padding: 10px;">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Sapiente quas nesciunt fugiat veritatis officiis debitis in
+          cupiditate odio quidem. Illum perferendis ipsam voluptates asperiores
+          molestias sint enim inventore sequi consequatur!
+        </p>
+
+      </div>
+
+      <div class="div-button">
+        <ion-button expand="block" class="ultimo-button" color="azul-claro" (click)="visualizado()">comprar livro</ion-button>
+      </div>
+
+    </ion-content>
+  </div>
+
+  <div *ngIf="livroId === 6" class="centralizar">
+
+    <ion-card class="card">
+
+      <div class="capa-livro">
+        <ion-img src="https://www.bahiagrafica.com.br/wp-content/uploads/2020/07/3139_1.jpg"></ion-img>
+      </div>
+
+      <div class="informacaos-do-livro">
+
+        <div style="flex-direction: column; display: flex; gap: 20px; margin-top: 10px;">
+          <ion-title color="letras" class="titulo" color="letras"><strong>Salmos 7</strong></ion-title>
+          <div>
+            <ion-title color="letras">Cristiane Messor</ion-title>
+            <ion-title color="letras">Publicado</ion-title>
+          </div>
+        </div>
+
+        <div>
+          <div class="visualizacao">
+            <ion-title color="letras" class="visualizacao">{{ visualizacao }} visualizações</ion-title>
+            <ion-title color="letras" class="visualizacao">{{ gostei }} gostei</ion-title>
+          </div>
+          <ion-button expand="block" color="azul-escuro" style="text-transform: capitalize;" (click)="like()">Gostei</ion-button>
+        </div>
+
+      </div>
+    </ion-card>
+
+    <ion-content color="cinza-claro" class="resumo">
+      <div>
+
+        <ion-title class="titulo" style="margin-top: 30px; padding: 10px;"><strong>Resumo</strong></ion-title>
+        <p style="padding: 10px;">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Sapiente quas nesciunt fugiat veritatis officiis debitis in
+          cupiditate odio quidem. Illum perferendis ipsam voluptates asperiores
+          molestias sint enim inventore sequi consequatur!
+        </p>
+
+      </div>
+
+      <div class="div-button">
+        <ion-button expand="block" class="ultimo-button" color="azul-claro" (click)="visualizado()">comprar livro</ion-button>
+      </div>
+
+    </ion-content>
+  </div>
+
+</ion-content>

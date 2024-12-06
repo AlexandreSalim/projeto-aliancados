@@ -1,21 +1,41 @@
 <ion-app>
-  <ion-split-pane contentId="main-content" *ngIf="!isLoginPage">
-    <ion-menu contentId="main-content" type="overlay">
+  <ion-split-pane contentId="main-content" when="false" *ngIf="!isLoginPage">
+
+    <!-- Menu principal -->
+    <ion-menu contentId="main-content" side="start" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-list-header>Inbox</ion-list-header>
+          <ion-list-header>Menu Esquerdo</ion-list-header>
           <ion-note>hi&#64;ionicframework.com</ion-note>
-
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-              <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
+              routerLinkActive="selected" color="azul-claro" style="margin-bottom: 5px;">
+              <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"
+                color="branco"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
       </ion-content>
+      <ion-button color="azul-claro" (click)="logout()"><strong>Sair</strong></ion-button>
     </ion-menu>
+
+    <!-- Menu notificações -->
+    <ion-menu contentId="main-content" side="end" type="overlay">
+      <ion-header>
+        <ion-list-header><b>NOTFICAÇÔES TESTE</b></ion-list-header>
+      </ion-header>
+      <ion-content>
+        <ion-list id="settings-list">
+          <ion-note>temos uma nova notificação</ion-note>
+          <ion-note>temos uma nova notificação</ion-note>
+          <ion-note>temos uma nova notificação</ion-note>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
+
   <ion-router-outlet id="main-content" *ngIf="isLoginPage"></ion-router-outlet>
 </ion-app>

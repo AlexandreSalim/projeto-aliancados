@@ -1,0 +1,61 @@
+<ion-toolbar color="azul-claro">
+
+  <div class="header">
+
+    <div class="icones" style="margin-left: 15px;">
+      <ion-icon name="chevron-back-outline" (click)="voltarPaginaInical()"></ion-icon>
+    </div>
+
+    <ion-buttons slot="end" class="icones">
+
+      <div class="search-container">
+        <ion-icon name="search" color="branco" (click)="toggleSearch()" style="cursor: pointer;"></ion-icon>
+        <input
+          *ngIf="showSearch"
+          type="text"
+          class="search-input"
+          placeholder="Pesquisar..."
+          (blur)="toggleSearch()" />
+      </div>
+
+      <ion-menu-button color="branco"></ion-menu-button>
+    </ion-buttons>
+
+  </div>
+</ion-toolbar>
+
+<div style="border-top: solid 1px white; padding: 10px; background-color: #212121;"></div>
+
+<ion-content color="cinza-claro">
+
+  <ion-toolbar color="cinza-claro">
+    <div class="icones titulo">
+      <ion-icon name="reader-outline"></ion-icon>
+      <h2 class="icone-e-titulo">Vivendo em aliança!</h2>
+    </div>
+  </ion-toolbar>
+
+  <div style="margin-left: 15px;">
+    <ion-toolbar style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+      <ion-title color="letras">Em destaque</ion-title>
+    </ion-toolbar>
+  
+    <swiper-container class="livros">
+      <swiper-slide class="slide" *ngFor="let livro of pdfs" (click)="abrirModal(livro)">
+        <div style="background-color: white; height: 30px; padding: 0 8px; display: flex; align-items: center; margin-bottom: 40px;"><strong style="font-size: large; text-transform: uppercase;">{{ livro.nome }}</strong></div>
+      </swiper-slide>
+    </swiper-container>
+  
+    <ion-toolbar style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+      <ion-title color="letras">Ultimos Visualizados</ion-title>
+    </ion-toolbar>
+  
+    <swiper-container class="livros">
+      <swiper-slide class="slide" *ngFor="let livro of pdfs" (click)="abrirModal(livro)">
+        <div style="background-color: white; height: 30px; padding: 0 8px; display: flex; align-items: center; margin-bottom: 40px;"><strong style="font-size: large; text-transform: uppercase;">{{ livro.nome }}</strong></div>
+      </swiper-slide>
+    </swiper-container>
+  
+  </div>
+  
+</ion-content>

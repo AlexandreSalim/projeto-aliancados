@@ -1,0 +1,51 @@
+<ion-toolbar color="azul-claro">
+
+  <div class="header">
+
+    <div class="icones" style="margin-left: 15px;">
+      <ion-icon name="chevron-back-outline" (click)="voltarPaginaInical()"></ion-icon>
+    </div>
+
+    <ion-buttons slot="end" class="icones">
+      <div class="search-container">
+        <ion-icon name="search" color="branco" (click)="toggleSearch()" style="cursor: pointer; font-size: 30px;"></ion-icon>
+        <input
+          *ngIf="showSearch"
+          type="text"
+          class="search-input"
+          placeholder="Pesquisar..."
+          (blur)="toggleSearch()" />
+      </div>
+      <ion-menu-button color="branco"></ion-menu-button>
+    </ion-buttons>
+
+  </div>
+</ion-toolbar>
+
+<div style="border-top: solid 1px white; padding: 10px; background-color:#212121;"></div>
+
+<ion-content color="cinza-claro">
+  <ion-toolbar color="cinza-claro">
+    <div class="icones titulo">
+      <ion-icon name="library-outline"></ion-icon>            
+      <h2 class="icone-e-titulo">Biblioteca dos aliançados</h2>
+    </div>
+  </ion-toolbar>
+
+  <div class="div-livros">
+    
+    <ion-card class="card-livros" *ngFor="let item of items" (click)="abrirResumoLivro(item.id)">
+      <ion-toolbar style="height: 100%;" color="azul-claro">
+        <ion-icon 
+        slot="end" 
+        class="heart" 
+        [name]="item.heart" 
+        [ngClass]="{ 'heart-color': item.heart === 'heart' }" 
+        (click)="favorite(item, $event)">
+        </ion-icon>      
+      </ion-toolbar>
+    </ion-card>
+
+  </div>
+
+</ion-content>

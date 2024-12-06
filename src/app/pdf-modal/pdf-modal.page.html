@@ -1,0 +1,24 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="header" style="background-color: grey;">BAIXAR PDF DO LIVRO {{ nome | uppercase }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div style="display: flex; height: 84%; flex-direction: column; justify-content: space-between;">
+    <ion-toolbar style="margin-top: 10px;">
+      <ion-title class="header"><strong>ID do Livro:</strong> {{ id }}</ion-title>
+      <ion-title class="header"><strong>Nome do Livro:</strong> {{ nome  | uppercase}}</ion-title>
+    </ion-toolbar>
+
+    <div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+        <ion-button fill="outline" (click)="enviarDados()" color="azul-claro" style="width: 130px; height: 38px;">
+          BAIXAR PDF
+        </ion-button>
+        <ion-button fill="outline" (click)="fecharModal()" color="azul-claro" style="width: 130px;height: 38px;">
+          SAIR
+        </ion-button>
+    </div>
+    
+  </div>
+</ion-content>
