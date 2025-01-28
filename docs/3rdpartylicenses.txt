@@ -256,7 +256,15 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 @ionic/core/components
 
+@stencil/core/internal
+
+@stencil/core/internal/app-data
+
+@stencil/core/internal/client
+
 ionic-loader
+
+ionicons/components
 
 ngx-mask
 MIT
